@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Yard sale home</title>
+    <style>
+        :root{
+            --white:#f7f7f7;
+            --black: #333;
+            --very-light-pink: #c7c7c7;
+            --hostital-green: #acd9b2;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+            --xl: 24px;
+            --text-input-field: #f0efef;
+        }
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Quicksand', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <section class="main-container">
+
+        <template id="card-container">
+            <figure class="product-card">
+                <img src="" alt="" class="product-img">
+                <p>$120.00</p>
+                <figcaption></figcaption>
+            </figure>
+        </template>
+
+    </section>
+    <script type="text/javascript">
+        /*capturamos elementos del DOM*/
+        const card = document.querySelector('.product-card');
+        const template = document.getElementById('card-container').content;
+        const fragment = document.createDocumentFragment();
+
+        /*muchos objetos*/
+        const arreglo = [
+            {
+                img: 'https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
+                text: 'Camara profesional',
+                precio: '$100'
+            },
+            {
+                img: 'https://images.pexels.com/photos/2533266/pexels-photo-2533266.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
+                text: 'Maquillaje para dama',
+                precio: '$20'
+            },
+            {
+                img: 'https://images.pexels.com/photos/248412/pexels-photo-248412.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
+                text: 'Lechita pa tu boca',
+                precio: '$10'
+            },
+            {
+                img: 'https://images.pexels.com/photos/1279107/pexels-photo-1279107.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
+                text: 'Cosa que te espia',
+                precio: '$100'
+            },
+            {
+                img: 'https://images.pexels.com/photos/4158/apple-iphone-smartphone-desk.jpg?auto=compress&cs=tinysrgb&h=750&w=1260',
+                text: 'Productos apple  variados',
+                precio: '$5500'
+            },
+            {
+                img: 'https://images.pexels.com/photos/2783873/pexels-photo-2783873.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
+                text: 'Relog michael kors',
+                precio: '$1000'
+            },
+            {
+                img: 'https://images.pexels.com/photos/913135/pexels-photo-913135.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
+                text: 'Cupcake 💖',
+                precio: '$10'
+            },
+            {
+                img: 'https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
+                text: 'Se vende hombre trabajador',
+                precio: '$100'
+            },
+            {
+                img: 'https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
+                text: 'Pankaques 💜💥',
+                precio: '$8'
+            },
+            {
+                img: 'https://images.pexels.com/photos/3338681/pexels-photo-3338681.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
+                text: 'Donitas uwu',
+                precio: '$1 la unidad'
+            },
+            {
+                img: 'https://images.pexels.com/photos/3587478/pexels-photo-3587478.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260',
+                text: 'Se venden audifonos y micro re piolas',
+                precio: '$250'
+            },
+            {
+                img: 'https://images.pexels.com/photos/3587478/pexels-photo-3587478.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260',
+                text: 'Vendemos servicio de produccion audiovisual',
+                precio: '$250 por sesión'
+            },
+        ];
+
+        /*manipulamos las cards*/
+        arreglo.forEach( obj => {
+            template.querySelector('img').setAttribute('src',obj.img);
+            template.querySelector('img').setAttribute('alt',obj.text);
+            template.querySelector('figcaption').textContent = obj.text;
+            template.querySelector('p').textContent = obj.precio;
+
+            let clon = document.importNode(template,true);
+            fragment.appendChild(clon)
+        });
+
+        card.appendChild(fragment)
+    </script>
+</body>
+</html>
