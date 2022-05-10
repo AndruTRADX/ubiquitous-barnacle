@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<title>Yard sale my order</title>
+<title>Yard sale my orders</title>
     <style>
         :root{
             --white:#f7f7f7;
@@ -56,41 +56,12 @@
             flex-direction: column;
         }
 
-        .shoopping-card img{
-            width: 70px;
-            height: 70px;
-            border-radius: 20px;
-            object-fit: cover;
-        }
-
-        .shoopping-card p:nth-child(2) {
-            color: var(--very-light-pink);
-        }
-
-        .shoopping-card p:nth-child(4) {
-            font-size: var(--md);
-            font-weight: bold;
-        }
-
-        .shoopping-card {
-            margin: 12px 0; 
-            display: grid;
-            grid-template-columns: auto 1fr auto auto;
-            gap: 16px;
-        }
-
-        .shoopping-card div {
-            width: 36px;
-        }
-
         .order {
             display: grid;
-            grid-template-columns: auto 1fr;
+            width: 300px;
+            grid-template-columns: auto 1fr auto;
             gap: 16px;
             align-items: center;
-            background: var(--text-input-field);
-            border-radius: 8px;
-            padding: 10px 24px;
             margin-bottom: 12px;
         }
 
@@ -124,19 +95,46 @@
     <div class="my-order">
         <div class="my-order-container">
             <div class="my-order-content">
-                <h1 class="title">My order</h1>
+                <h1 class="title">My orders</h1>
                 <div class="order">
                     <p>
                         <span>07/05/2022</span>
                         <span> 6 articles</span>
                     </p>
                     <p>$560.00</p>
+                    <img src="./icons/flechita.svg" alt="flechita">
                 </div>
-                <div class="shoopping-card">
-                        <img src="https://images.pexels.com/photos/380954/pexels-photo-380954.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Heladito">
-                        <p>Heladito</p>
-                        <div></div>
-                        <p>$1.25</p>
+                <div class="order">
+                    <p>
+                        <span>07/05/2022</span>
+                        <span> 6 articles</span>
+                    </p>
+                    <p>$560.00</p>
+                    <img src="./icons/flechita.svg" alt="flechita">
+                </div>
+                <div class="order">
+                    <p>
+                        <span>07/05/2022</span>
+                        <span> 6 articles</span>
+                    </p>
+                    <p>$560.00</p>
+                    <img src="./icons/flechita.svg" alt="flechita">
+                </div>
+                <div class="order">
+                    <p>
+                        <span>07/05/2022</span>
+                        <span> 6 articles</span>
+                    </p>
+                    <p>$560.00</p>
+                    <img src="./icons/flechita.svg" alt="flechita">
+                </div>
+                <div class="order">
+                    <p>
+                        <span>07/05/2022</span>
+                        <span> 6 articles</span>
+                    </p>
+                    <p>$560.00</p>
+                    <img src="./icons/flechita.svg" alt="flechita">
                 </div>
             </div>
         </div>
